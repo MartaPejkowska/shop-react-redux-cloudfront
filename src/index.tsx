@@ -8,6 +8,22 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { theme } from "~/theme";
 
+// import * as cdk from "@aws-cdk/core";
+// import { StaticSite } from "../static-site";
+
+// class myStaticSiteStack extends cdk.Stack {
+//   constructor(parent: cdk.App, name: string) {
+//     super(parent, name);
+
+//     new StaticSite(this, "JSSCStaticWebsite");
+// }
+// }
+
+// const app = new cdk.App();
+
+// new myStaticSiteStack(app, "MyJSSCStaticWebsite");
+// app.synth();
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: { refetchOnWindowFocus: false, retry: false, staleTime: Infinity },
