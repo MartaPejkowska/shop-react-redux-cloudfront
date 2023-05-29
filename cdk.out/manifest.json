@@ -88,13 +88,13 @@
           {
             "type": "aws:cdk:asset",
             "data": {
-              "path": "asset.d7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531",
-              "id": "d7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531",
+              "path": "asset.084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952c",
+              "id": "084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952c",
               "packaging": "zip",
-              "sourceHash": "d7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531",
-              "s3BucketParameter": "AssetParametersd7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531S3Bucket85B9EB85",
-              "s3KeyParameter": "AssetParametersd7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531S3VersionKeyAE85A617",
-              "artifactHashParameter": "AssetParametersd7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531ArtifactHash147604AC"
+              "sourceHash": "084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952c",
+              "s3BucketParameter": "AssetParameters084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952cS3BucketF05C3F63",
+              "s3KeyParameter": "AssetParameters084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952cS3VersionKey31D1E1A8",
+              "artifactHashParameter": "AssetParameters084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952cArtifactHashA4A82B9E"
             },
             "trace": [
               "ConstructNode.addMetadata (C:\\Users\\marta\\Desktop\\Marta\\programowanie\\RS School- Node in AWS\\jeszcze raz\\shop-react-redux-cloudfront\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
@@ -397,10 +397,10 @@
             ]
           }
         ],
-        "/SPADeployStack/AssetParameters/d7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531/S3Bucket": [
+        "/SPADeployStack/AssetParameters/084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952c/S3Bucket": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParametersd7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531S3Bucket85B9EB85",
+            "data": "AssetParameters084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952cS3BucketF05C3F63",
             "trace": [
               "new FileAssetParameters (C:\\Users\\marta\\Desktop\\Marta\\programowanie\\RS School- Node in AWS\\jeszcze raz\\shop-react-redux-cloudfront\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
               "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\marta\\Desktop\\Marta\\programowanie\\RS School- Node in AWS\\jeszcze raz\\shop-react-redux-cloudfront\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:189:22)",
@@ -425,10 +425,10 @@
             ]
           }
         ],
-        "/SPADeployStack/AssetParameters/d7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531/S3VersionKey": [
+        "/SPADeployStack/AssetParameters/084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952c/S3VersionKey": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParametersd7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531S3VersionKeyAE85A617",
+            "data": "AssetParameters084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952cS3VersionKey31D1E1A8",
             "trace": [
               "new FileAssetParameters (C:\\Users\\marta\\Desktop\\Marta\\programowanie\\RS School- Node in AWS\\jeszcze raz\\shop-react-redux-cloudfront\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
               "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\marta\\Desktop\\Marta\\programowanie\\RS School- Node in AWS\\jeszcze raz\\shop-react-redux-cloudfront\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:189:22)",
@@ -453,10 +453,10 @@
             ]
           }
         ],
-        "/SPADeployStack/AssetParameters/d7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531/ArtifactHash": [
+        "/SPADeployStack/AssetParameters/084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952c/ArtifactHash": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssetParametersd7cdc111c8d49ae29f03b9a0067a4d076f43060f28b3094c3d6c8331aa8ad531ArtifactHash147604AC",
+            "data": "AssetParameters084299c551cbd1c09fc77b28390ced51b71132b1a5f192e747a3066b4360952cArtifactHashA4A82B9E",
             "trace": [
               "new FileAssetParameters (C:\\Users\\marta\\Desktop\\Marta\\programowanie\\RS School- Node in AWS\\jeszcze raz\\shop-react-redux-cloudfront\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
               "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\marta\\Desktop\\Marta\\programowanie\\RS School- Node in AWS\\jeszcze raz\\shop-react-redux-cloudfront\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:189:22)",
