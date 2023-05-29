@@ -33,7 +33,7 @@ Builds the project for production in `dist` folder.
 
 ### `cdk deploy`
 
-Deploy the project
+Deploy the project.
 
 ### `preview`
 
