@@ -1,3 +1,7 @@
+#S3 bucket URL: https://bio-shop-with-cdk.s3.eu-west-1.amazonaws.com/index.html
+
+#CloudFront URL: https://dr2a7jn5fg881.cloudfront.net
+
 # React-shop-cloudfront
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
