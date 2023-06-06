@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import { formatAsPrice } from "~/utils/utils";
 import AddProductToCart from "~/components/AddProductToCart/AddProductToCart";
 import { useAvailableProducts } from "~/queries/products";
+import { Box } from "@mui/system";
 
 export default function Products() {
   const { data = [], isLoading } = useAvailableProducts();
@@ -26,17 +27,21 @@ export default function Products() {
             <CardMedia
               sx={{ pt: "56.25%" }}
               image={product.image}
-              title="Image title"
+              title={product.title}
             />
-            <CardContent sx={{ flexGrow: 1 }}>
+            <CardContent sx={{ flexGrow: 1, display: "flex", flexDirection: "column", justifyContent:"space-between"}}>
               <Typography gutterBottom variant="h5" component="h2">
-                {product.title}
+                {product.title} {product.packSize}
               </Typography>
-              <Typography>{formatAsPrice(product.price)}</Typography>
-            </CardContent>
-            <CardActions>
+              <Typography variant="subtitle2">{product.description}</Typography>
+              <Box sx={{display:"flex", justifyContent: "space-between", alignItems:"center", mb:"0"}}>
+
+              <Typography sx={{ pt: "10px" }}>{formatAsPrice(product.price)}</Typography>
+            <CardActions disableSpacing={true}>
               <AddProductToCart product={product} />
             </CardActions>
+              </Box>
+            </CardContent>
           </Card>
         </Grid>
       ))}

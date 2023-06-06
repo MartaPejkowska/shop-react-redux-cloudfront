@@ -18,6 +18,8 @@ test("Renders products list", async () => {
       description: "Product 1 description",
       price: 1,
       count: 1,
+      image:'https://m.media-amazon.com/images/I/81iMQq1LxML.jpg',
+      packSize: '200g'
     },
     {
       id: "2",
@@ -25,6 +27,8 @@ test("Renders products list", async () => {
       description: "Product 2 description",
       price: 2,
       count: 2,
+      image:'https://m.media-amazon.com/images/I/81iMQq1LxML.jpg',
+    packSize: '200g'
     },
   ];
   server.use(
