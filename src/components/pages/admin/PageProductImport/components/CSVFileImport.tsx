@@ -1,7 +1,8 @@
 import React from "react";
+import axios, { AxiosError } from "axios";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import axios from "axios";
+import Alert from "@mui/material/Alert";
 
 type CSVFileImportProps = {
   url: string;
@@ -9,7 +10,8 @@ type CSVFileImportProps = {
 };
 
 export default function CSVFileImport({ url, title }: CSVFileImportProps) {
-  const [file, setFile] = React.useState<File | null>();
+  const [file, setFile] = React.useState<File>();
+  const [errorMessage, setErrorMessage] = React.useState<string | null>();
 
   const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -26,15 +28,43 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
   const uploadFile = async () => {
     console.log("uploadFile to", url);
 
+    if (!file) {
+      return Promise.reject("File not found");
+    }
+
+    const authorization_token = localStorage.getItem("authorization_token");
+    const headers = authorization_token
+      ? {
+          Authorization: `Basic ${authorization_token}`,
+        }
+      : undefined;
+
+    let response;
+
+    try {
+      response = await axios({
+        method: "GET",
+        url,
+        headers,
+        params: {
+          name: encodeURIComponent(file.name),
+        },
+      });
+      setErrorMessage(null);
+    } catch (e) {
+      if (e instanceof AxiosError) {
+        const status = e.response?.status;
+
+        if (status === 401 || status === 403) {
+          setErrorMessage(`${status} ${e.response?.data?.message}`);
+        }
+      }
+
+      return;
+    }
+
     // Get the presigned URL
-    const response = await axios({
-      method: "GET",
-      url,
-      params: {
-        name: encodeURIComponent(file!.name),
-      },
-    });
-    console.log("File to upload: ", file?.name);
+    console.log("File to upload: ", file.name);
     console.log("Uploading to: ", response.data.url);
     const result = await fetch(response.data.url, {
       method: "PUT",
@@ -43,11 +73,20 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
     console.log("Result: ", result);
     setFile(undefined);
   };
+
   return (
     <Box>
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
+      {errorMessage && (
+        <Alert
+          sx={{ marginBottom: (theme) => theme.spacing(1) }}
+          severity="error"
+        >
+          {errorMessage}
+        </Alert>
+      )}
       {!file ? (
         <input type="file" onChange={onFileChange} />
       ) : (
